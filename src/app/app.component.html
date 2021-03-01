@@ -1,16 +1,15 @@
-<!-- <h1>Movie Favourites</h1>
-
-<ul>
-  <li *ngFor="let movie of movies"> {{movie.title}} ({{movie.year}}) - Directed by {{movie.director}}
-  </li>
-</ul> -->
-
 <div class='container'>
-
-  <h1>Movies</h1>
-
-  <app-add-movie></app-add-movie>
-  
+  <h1>Movies IO</h1>
+  <app-add-movies></app-add-movies>
 </div>
 
-<app-list-movie></app-list-movie>
+<div class='container'>
+  <div class="row">
+    <div class="col">
+      <app-list-movies (onSelectedMovie)="setSelectedMovie($event)"></app-list-movies>
+    </div>
+    <div>
+      <app-movie-detail [movieDetails]="mySelectedMovie"></app-movie-detail>
+    </div>
+  </div>
+</div>
