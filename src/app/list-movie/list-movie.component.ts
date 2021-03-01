@@ -29,7 +29,7 @@ export class ListMovieComponent implements OnInit {
     this.onSelectedMovie.emit(myMovie);
   }
 
-  isSekected(movie:Movie): boolean {
+  isSelected(movie:Movie): boolean {
     if (!movie || !this.currentMovie) {
       return false;
     }
