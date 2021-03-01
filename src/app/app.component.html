@@ -6,7 +6,7 @@
 <div class='container'>
   <div class="row">
     <div class="col">
-      <app-list-movies (onSelectedMovie)="setSelectedMovie($event)"></app-list-movies>
+      <app-list-movie (onSelectedMovie)="setSelectedMovie($event)"></app-list-movie>
     </div>
     <div>
       <app-movie-detail [movieDetails]="mySelectedMovie"></app-movie-detail>

@@ -10,18 +10,18 @@ movie: Movie;
 
   constructor() { }
 
-  moviesList = [
-    { title: 'The Godfather', year: '1972', director: 'Francis Ford Capola'},
-    { title: 'Millers Crossing', year: '1990', director: 'The Coen Brothers'},
-    { title: 'Dial M for Murder', year: '1954', director: 'Alfred Hitchcock'},
-    { title: 'Whiplash', year: '2014', director: 'Damien Chazelle'}
+  movieList = [
+    new Movie('The GodFather', '1972', 'Francis Ford Coppola'),
+    new Movie('Millers Crossing', '1990', 'The Coen Brothers'),
+    new Movie('Dial M for Murder', '1954', 'Alfred Hitchcock'),
+    new Movie('Whiplash', '2014', 'Damien Chazelle')
   ];
 
   getMovies() {
-    return this.moviesList;
+    return this.movieList.sort();
   }
 
-  addMovie(movietitle:string, moviedirector:string, movieyear:string) {
-    this.moviesList.push(new Movie(movietitle, movieyear, moviedirector));
+  addMovie(movietitle: string, moviedirector: string, movieyear: string) {
+    this.movieList.push(new Movie(movietitle, movieyear, moviedirector));
   }
 }
