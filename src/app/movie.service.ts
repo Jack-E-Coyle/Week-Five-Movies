@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
+import { Movie } from "./movie.model";
 
 @Injectable({
   providedIn: 'root'
 })
 export class MovieService {
+
+movie: Movie;
 
   constructor() { }
 
@@ -19,6 +22,6 @@ export class MovieService {
   }
 
   addMovie(movietitle:string, moviedirector:string, movieyear:string) {
-    this.moviesList.push({title:movietitle, director:moviedirector, year:movieyear});
+    this.moviesList.push(new Movie(movietitle, movieyear, moviedirector));
   }
 }
